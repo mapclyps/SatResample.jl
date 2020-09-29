@@ -1,0 +1,3 @@
+[deps]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+SatResample = "da75141d-1d2f-4a17-836c-db3d8e986037"
