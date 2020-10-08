@@ -20,15 +20,15 @@ function resample(mx,my,data,xgrid,ygrid,maxdist,nneighbors)
 		md=false
 	end
 
-	AA=[SVector(i) for i in Iterators.product(xgrid,ygrid)][:]
-	BB=SVector.(zip(mx,my))
+	AA=[SVector(i) for i in Iterators.product(ygrid,xgrid)][:]
+	BB=SVector.(zip(my,mx))
 	kdt=KDTree(BB)#;leafsize=3,reorder=false)
 	ind,dist=knn(kdt,AA,nneighbors,true)
 	
 	if md
-		outimg= [fill(NaN,(length(xgrid),length(ygrid))) for i in 1:length(data)]
+		outimg= [fill(NaN,(length(ygrid),length(xgrid))) for i in 1:length(data)]
 	else
-		outimg=fill(NaN,(length(xgrid),length(ygrid)))
+		outimg=fill(NaN,(length(ygrid),length(xgrid)))
 	end
 
 	for (n,(i,d)) in enumerate(zip(ind,dist))
