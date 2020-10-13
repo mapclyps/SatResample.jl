@@ -1,4 +1,4 @@
-#some shortcuts for comon grids in polar remote sensing
+#some shortcuts for common grids in polar remote sensing
 """
 	NSIDCN(n)
 
