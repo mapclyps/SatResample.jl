@@ -5,7 +5,7 @@
 generate the _National Snow and Ice Data Center_ North polar stereographic grid 
 for a given resolution `n` in m
 """
-NSDICN(n)=Grid(Proj4.Projection(Proj4.epsg[3411]),(-3850,3750).*1e3,(-5350,3850).*1e3,n)
+NSIDCN(n)=Grid(Proj4.Projection(Proj4.epsg[3413]),(-3850,3750).*1e3,(-5350,5850).*1e3,n)
 
 """
 	NSDICS(n)
@@ -13,7 +13,7 @@ NSDICN(n)=Grid(Proj4.Projection(Proj4.epsg[3411]),(-3850,3750).*1e3,(-5350,3850)
 generate the _National Snow and Ice Data Center_ South polar stereographic grid
 for a given resolution `n` in m
 """
-NSDICS(n)=Grid(Proj4.Projection(Proj4.epsg[3412]),(-3950,3950).*1e3,(-3950,4350).*1e3,n)
+NSIDCS(n)=Grid(Proj4.Projection(Proj4.epsg[3976]),(-3950,3950).*1e3,(-3950,4350).*1e3,n)
 
 """
 	EASE2N(n)
