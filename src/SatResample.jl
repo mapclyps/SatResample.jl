@@ -144,8 +144,8 @@ end
 generates grid coordinates `x` and `y` for a given grid instance
 """
 function genxy(grid::Grid)
-	xg=grid.xlim[1]:grid.resolution:grid.xlim[2]
-	yg=grid.ylim[1]:grid.resolution:grid.ylim[2]
+	xg=grid.xlim[1]+grid.resolution/2:grid.resolution:grid.xlim[2]
+	yg=grid.ylim[1]+grid.resolution/2:grid.resolution:grid.ylim[2]
 	return xg,yg
 end
 
